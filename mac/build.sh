@@ -27,6 +27,6 @@ chmod 755 "$APP/Contents/MacOS/AGS Starter" "$APP/Contents/Resources/ags"
 codesign --force --deep --sign - "$APP"
 
 # 4) Als ZIP verpacken (ditto behaelt alle Rechte)
-cp README.txt LICENSE-spleen.txt dist/
-(cd dist && ditto -c -k --keepParent "AGS Starter.app" "AGS_Starter.zip" && zip -q AGS_Starter.zip README.txt LICENSE-spleen.txt)
+cp README.txt LICENSE THIRD-PARTY-NOTICES.md dist/
+(cd dist && ditto -c -k --keepParent "AGS Starter.app" "AGS_Starter.zip" && zip -q AGS_Starter.zip README.txt LICENSE THIRD-PARTY-NOTICES.md)
 ls -la dist

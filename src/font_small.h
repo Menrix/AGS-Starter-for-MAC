@@ -1,4 +1,4 @@
-/* Spleen 5x8 – Copyright (c) 2018-2026 Frederic Cambus, BSD 2-Clause (siehe README).
+/* Spleen 5x8 – Copyright (c) 2018-2026 Frederic Cambus, BSD 2-Clause (siehe THIRD-PARTY-NOTICES.md).
    Umlaute/Akzente ergaenzt fuer den AGS Starter. Zeichen 32..255, Bit 7 = linkes Pixel */
 static const unsigned char font_small[224][8]={
 {0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00},

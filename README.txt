@@ -33,4 +33,5 @@ Microphone prompt when a game starts: choose "Don't Allow" – it is not needed.
 Log file for troubleshooting: ~/Library/Logs/AGS Starter.log
 
 AGS (Adventure Game Studio) is open source: https://github.com/adventuregamestudio/ags
-Pixel fonts: font8x8 (public domain), Spleen 5x8 by Frederic Cambus (BSD 2-Clause, see LICENSE-spleen.txt). Graphics library: SDL2 (zlib license).
+Made by MENRIX (Don_Key_Moustache) – MIT License.
+Third-party parts (AGS engine, SDL2, fonts): see THIRD-PARTY-NOTICES.md.

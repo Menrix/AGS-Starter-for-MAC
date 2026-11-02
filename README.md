@@ -58,9 +58,9 @@ The app is built automatically by GitHub Actions on a macOS runner (`.github/wor
 Code: `src/main.c` (C + SDL2) · header image: `mac/header.bmp` · build script: `mac/build.sh`.
 Pushing a tag `v…` publishes a release.
 
-## Credits
+## Credits & license
 
-Made by **MENRIX (Don_Key_Moustache)**.
-AGS engine: [adventuregamestudio/ags](https://github.com/adventuregamestudio/ags) ·
-Fonts: font8x8 (public domain), Spleen 5x8 by Frederic Cambus (BSD 2-Clause, `LICENSE-spleen.txt`) ·
-SDL2 (zlib license).
+Made by **MENRIX (Don_Key_Moustache)** – released under the [MIT License](LICENSE).
+
+Built with the [AGS engine](https://github.com/adventuregamestudio/ags) (Artistic License 2.0), SDL2 (zlib),
+font8x8 (public domain) and Spleen 5x8 (BSD 2-Clause). Details: [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
