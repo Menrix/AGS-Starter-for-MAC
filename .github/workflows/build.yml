@@ -1,0 +1,39 @@
+name: Mac-App bauen
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: SDL2 bauen (Grafik-Bibliothek, fest eingebaut)
+        run: |
+          git clone --depth 1 --branch release-2.30.11 https://github.com/libsdl-org/SDL.git sdl-src
+          cmake -S sdl-src -B sdl-build -DCMAKE_BUILD_TYPE=Release \
+            -DSDL_SHARED=OFF -DSDL_STATIC=ON -DSDL_TEST=OFF \
+            -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" -DCMAKE_OSX_DEPLOYMENT_TARGET=11.0 \
+            -DCMAKE_INSTALL_PREFIX="$PWD/sdl"
+          cmake --build sdl-build -j 4
+          cmake --install sdl-build
+
+      - name: AGS Starter bauen
+        run: bash mac/build.sh
+
+      - name: Fertige App hochladen
+        uses: actions/upload-artifact@v4
+        with:
+          name: AGS-Starter-Mac
+          path: dist/AGS_Starter.zip
+
+      - name: Release erstellen (nur bei Versions-Tag v...)
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/AGS_Starter.zip
