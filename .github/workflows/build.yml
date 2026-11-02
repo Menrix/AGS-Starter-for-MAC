@@ -1,4 +1,5 @@
-name: Mac-App bauen
+   name: Build AGS Starter
+   run-name: AGS Starter for Mac – Build ${{ github.run_number }}
 
 on:
   push:
